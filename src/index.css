@@ -1,1 +1,14 @@
 @import "tailwindcss";@plugin "daisyui";
+.raleway-font {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .delius-font {
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+body{
+    background-color: #8b1ad727;
+}

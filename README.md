@@ -1,12 +1,5 @@
-# React + Vite
+This is A Game review website where you can review games.
+In this Website we used : Html, Css, Js, React, Tailwind, DaisyUi, ReactRouter and firebase for frontend/ClientSide
+And for backend/ServerSide we used : nodeJs, Mongodb, ExpressJs.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Home Page: Homepage contains Navbar, banner, 2 additional items and last but not least footer.
