@@ -1,9 +1,37 @@
-import React from "react";
-import { Link } from "react-router";
+import React, { useContext } from "react";
+import { Link, Navigate, useNavigate } from "react-router";
+import { AuthContext } from "../AuthProvider";
+import Swal from "sweetalert2";
 
 const SignIn = () => {
+  let navigate = useNavigate();
+  const {loginUser} = useContext(AuthContext)
+
+  const handleSignin = e =>{
+    e.preventDefault()
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    loginUser(email, password)
+    .then(userCredential=>{
+      if (userCredential.user) {
+        Swal.fire({
+          title: "Login Successful!",
+          icon: "success",
+          draggable: true
+        });
+        navigate(`/`)
+      }
+    })
+    .catch(error=>{
+      console.log(error.message);
+    })
+    
+  }
+
   return (
-    <form className="flex flex-col justify-center items-center h-screen delius-font text-[#FE4EDA]">
+    <form onSubmit={handleSignin} className="flex flex-col justify-center items-center h-screen delius-font text-[#FE4EDA]">
       <div >
         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-[300px] md:w-[700px] border p-4 text-center">
           <legend className="fieldset-legend text-3xl md:text-5xl font-bold text-[#FE4EDA]">
