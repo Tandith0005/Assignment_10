@@ -11,7 +11,7 @@ const Navbar = () => {
     <NavLink to="/">Home</NavLink>
     <NavLink to="/allReviews">All Reviews</NavLink>
     <NavLink to="/addReview">Add Review</NavLink>
-    <NavLink to="/myReviews">My Reviews</NavLink>
+    {user && <NavLink to={`/myReviews/by-email/${user.email}`}>My Reviews</NavLink>}
     <NavLink to="/gameWatchList">Game WatchList</NavLink>
     </>
   return (
